@@ -1,0 +1,213 @@
+.section {
+    border: 1px solid lightgray;
+    // width: 100%;
+    width: 1150px;
+    // height: 700px;
+    height: 100%;
+    //margin-left: 200px;
+    // margin-top: 20px;
+    border-radius: 38px;
+    background-color: beige;
+    margin: auto;
+}
+
+.heading {
+    //border: 1px solid;
+
+    //margin-top: -115px;
+    margin-right: 1030px;
+}
+
+h1 {
+    color: rgb(0, 170, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+}
+
+.matcard2 {
+    border: 1px solid gainsboro;
+    height: 580px;
+    width: 980px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+
+}
+
+.insuranceheading {}
+
+h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.mat-form-field {
+    width: 250px;
+
+}
+// input{
+    
+// }
+
+// input:focus{
+//     outline: none;
+// }
+
+.firstrow {
+    //border: 1px solid red;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
+.secondrow {
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
+.genderradiobutton {
+    //border: 1px solid red;
+    margin-top: 15px;
+    width: 400px;
+}
+
+.female {
+    margin-left: 20px;
+}
+
+.thirdrow {
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
+.tobaccoradiobutton {
+    //border: 1px solid red;
+    margin-top: 15px;
+    width: 200px;
+}
+
+.no {
+    margin-left: 28px;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.submitbutton {
+    background-color: rgb(0, 170, 255);
+    width: 250px;
+    border-radius: 20px;
+    color: white;
+    margin-top: 8px;
+}
+
+@media (max-width:420px) {
+    .section {
+        border: 1px solid lightgray;
+        // width: 100%;
+        width: 390px;
+        // height: 700px;
+        height: auto;
+        //margin-left: 200px;
+        // margin-top: 20px;
+        border-radius: 38px;
+        background-color: beige;
+        margin: auto;
+    }
+
+    .heading {
+        //border: 1px solid;
+
+        //margin-top: -115px;
+        margin-right: 260px;
+    }
+
+    h1 {
+        color: rgb(0, 170, 255);
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 550;
+    }
+
+    .matcard2 {
+        border: 1px solid gainsboro;
+        height: auto;
+        width: 330px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 10px;
+        margin: 15px;
+
+    }
+
+
+    .insuranceheading {
+        
+    }
+
+    h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .mat-form-field {
+        width: 250px;
+
+    }
+
+
+
+
+
+
+    .firstrow {
+        //border: 1px solid red;
+        margin-left: 30px;
+        margin-top: 40px;
+    }
+
+    .secondrow {
+        margin-left: 30px;
+        margin-top: 40px;
+    }
+    
+    .thirdrow {
+        margin-left: 30px;
+        margin-top: 40px;
+    }
+
+    .genderradiobutton {
+        //border: 1px solid red;
+        margin-top: 15px;
+        width: 300px;
+    }
+
+    .female {
+        margin-left: 20px;
+    }
+
+
+    .tobaccoradiobutton {
+        //border: 1px solid red;
+        margin-top: 15px;
+        width: 200px;
+    }
+
+    .no {
+        margin-left: 28px;
+    }
+
+    .submit {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .submitbutton {
+        background-color: rgb(0, 170, 255);
+        width: 250px;
+        border-radius: 20px;
+        color: white;
+        margin-top: 8px;
+    }
+
+}

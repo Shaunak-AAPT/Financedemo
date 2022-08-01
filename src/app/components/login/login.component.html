@@ -1,0 +1,93 @@
+<div class="section" fxLayout="column" fxLayoutAlign="center center">
+
+    <div class="heading">
+        <h1>Finizon</h1>
+    </div>
+    <mat-card class="matcard2">
+        <div class="signinheading">
+            <h2>Sign in</h2>
+        </div>
+        <form [formGroup]="loginform" (ngsubmit)="onSubmit()">
+            <div class="form">
+                <div class="email">
+
+                    <div>
+                        <mat-form-field appearance="outline">
+                            <input type="text" formControlName="email" matInput placeholder="Email or Phone">
+                            <!-- <mat-hint>please enter email id</mat-hint> -->
+                            <!-- <mat-error *ngIf="loginform.value.email">Email must be a combination of numbers & special characters</mat-error> -->
+                           
+                            <mat-error *ngIf="loginform.get('email')?.hasError('required')">Please enter email id</mat-error>
+                            <mat-error *ngIf="loginform.get('email')?.hasError('pattern')">Please enter valid email id as mail must be a combination of numbers & special characters</mat-error>
+
+                            <!-- <mat-error>Enter an email address</mat-error> -->
+
+                        </mat-form-field>
+                    </div>
+
+                </div>
+
+                <div class="password">
+
+                    <div>
+                        <mat-form-field appearance="outline">
+                            <input type="text" formControlName="password" type="password" matInput placeholder="Password">
+                            <!-- <mat-error *ngIf="loginform.value.password">Password must be a combination of lower-case, upper-case, numbers and at least 9 characters</mat-error> -->
+
+                            <mat-error *ngIf="loginform.get('password')?.hasError('required')">Please enter password</mat-error>
+                            <mat-error *ngIf="loginform.get('password')?.hasError('pattern')">Password must be a combination of lower-case, upper-case, numbers and at least 9 characters</mat-error>
+
+
+                            <!-- <mat-error>Enter a password</mat-error> -->
+
+                        </mat-form-field>
+                    </div>
+
+                </div>
+
+                <div class="confirmpassword">
+
+                    <div>
+                        <mat-form-field appearance="outline">
+                            <input type="text" formControlName="confirmpassword" type="password" matInput placeholder="confirm Password" required pattern="{{loginform.value.password}}">
+                            <!-- <mat-error *ngIf="loginform.value.password">Confirm Password must match with above password</mat-error> -->
+
+                            <mat-error *ngIf="loginform.get('confirmpassword')?.hasError('required')">Please confirm your password</mat-error>
+                            <mat-error *ngIf="loginform.get('confirmpassword')?.hasError('pattern')">Confirm Password & above password must be same </mat-error>
+
+
+                            <!-- <mat-error>Enter a password</mat-error> -->
+
+                        </mat-form-field>
+                    </div>
+
+                </div>
+
+                <div class="forgotpasswordbutton">
+                    <button class="button">Forgot Password?</button>
+
+                </div>
+
+                <div class="signup">
+                    <button type="button" [disabled]="loginform.invalid" (click)="login()" class="signupbutton" routerLink="/insurance" mat-flat-button>Sign In</button>
+                </div>
+
+                <div class="or">
+                    ------------------ or ------------------
+                </div>
+
+                <div>
+                    <div class="button1">
+                        <button class="facebookbutton" mat-flat-button color="primary">Facebook</button>
+                        <button class="googlebutton" mat-flat-button>Google</button>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+
+    </mat-card>
+
+</div>
