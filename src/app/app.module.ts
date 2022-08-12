@@ -20,12 +20,19 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 
 import { HttpClientModule } from '@angular/common/http';
+import { RegistrationComponent } from './components/registration/registration.component';
+import { EmicalcComponent } from './components/emicalc/emicalc.component';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatDividerModule} from '@angular/material/divider';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    InsurancedetailsComponent
+    InsurancedetailsComponent,
+    RegistrationComponent,
+    EmicalcComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +53,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatRadioModule,
     MatSelectModule,
 
-    HttpClientModule
+    HttpClientModule,
+    MatSliderModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

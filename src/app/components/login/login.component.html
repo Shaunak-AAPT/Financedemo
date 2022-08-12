@@ -7,7 +7,7 @@
         <div class="signinheading">
             <h2>Sign in</h2>
         </div>
-        <form [formGroup]="loginform" (ngsubmit)="onSubmit()">
+        <form [formGroup]="loginform">
             <div class="form">
                 <div class="email">
 
@@ -69,7 +69,7 @@
                 </div>
 
                 <div class="signup">
-                    <button type="button" [disabled]="loginform.invalid" (click)="login()" class="signupbutton" routerLink="/insurance" mat-flat-button>Sign In</button>
+                    <button type="button" [disabled]="loginform.invalid" (click)="onSubmit()" class="signupbutton" mat-flat-button>Sign In</button>
                 </div>
 
                 <div class="or">

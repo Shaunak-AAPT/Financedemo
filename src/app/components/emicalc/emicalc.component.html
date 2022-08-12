@@ -1,0 +1,47 @@
+<div class="section" fxLayout="column" fxLayoutAlign="center center">
+    <mat-card class="matcard2">
+        <h2>EMI Calculator</h2>
+        <div class="container">
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <h4>Loan Amount (₹) : </h4>
+                <span><input [(ngModel)]="loanAmount" type="number"></span>
+              
+            </div>
+            <div>
+                <mat-slider fxFlex="" [(ngModel)]="loanAmount" thumbLabel [displayWith]="formatLabel"
+                    tickInterval="1000" step="100000" min="10000" max="10000000" aria-label="units"></mat-slider>
+            </div>
+            <mat-divider></mat-divider>
+
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <h4>Tenure (M) : </h4>
+                <span><input [(ngModel)]="tenure" type="number"></span>
+            </div>
+            <div>
+                <mat-slider fxFlex="" [(ngModel)]="tenure" thumbLabel [displayWith]="formatLabel" tickInterval="3"
+                    step="1" min="1" max="50" aria-label="units"></mat-slider>
+            </div>
+            <mat-divider></mat-divider>
+
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <h4>Interest rate (%) :</h4>
+                <span><input [(ngModel)]="interest" type="number"></span>
+            </div>
+            <div>
+                <mat-slider fxFlex="" [(ngModel)]="interest"
+                thumbLabel [displayWith]="formatLabel" tickInterval="4"
+                step="1" min="1" max="100" aria-label="units"></mat-slider>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="calculatebutton">
+                <button fxFlex="100" mat-raised-button color="accent" (click)="calculateemi()">Calculate EMI</button>
+
+            </div>
+            <div class="emi">
+                <h1>EMI : {{ emi }}/m</h1>
+            </div>
+
+        </div>
+    </mat-card>
+
+</div>
